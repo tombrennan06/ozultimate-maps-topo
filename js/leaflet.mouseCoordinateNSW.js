@@ -32,8 +32,8 @@ L.Control.mouseCoordinateNSW = L.Control.extend({
         return container;
     },
     _update: function(e){
-        var lat = Math.round(e.latlng.lat * 100000) / 100000 ;
-        var lng = Math.round(e.latlng.lng * 100000) / 100000 ;
+        var lat = Math.round(e.latlng.lat * 10000) / 10000 ; //edit by TB 20/01/19 for /topo - shorter numbers
+        var lng = Math.round(e.latlng.lng * 10000) / 10000 ; //edit by TB 20/01/19 for /topo - shorter numbers
         var gps = {lat: lat,lng: lng};
         var content = "<table id=mousecoordinate>";
         if(this.options.gps){
